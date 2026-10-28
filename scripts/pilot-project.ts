@@ -223,6 +223,7 @@ export function buildPilotProject(): Project {
     editorialNotes: [
       { id: 'e1', createdAt: now, text: 'Narration is the owner’s draft, split at sentence level only. Nothing was reworded. Historical wording marked in the dossier still needs checking against the sources.' },
       { id: 'e2', createdAt: now, text: 'The voice is an offline scratch voice (espeak-ng). It exists so timing, mix and render can be proven without an account. Replace it with a real narration by importing audio or using a TTS provider.' },
+      { id: 'e4', createdAt: now, text: 'Source check not done: outbound web access was blocked when this dossier was drafted, so no source (including Medina’s book) was opened. Claims come from the narration draft and general knowledge and all remain unverified. A person must check them against the cited sources before publication.' },
       { id: 'e3', createdAt: now, text: 'All room, map, telex and screen imagery is original illustration drawn in code and is labelled as reconstruction on screen. Archival photographs and portraits are placeholders until licensed material is assigned.' },
     ],
   };

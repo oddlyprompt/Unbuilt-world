@@ -112,8 +112,8 @@ const ShotEditor: React.FC<{ shot: Shot }> = ({ shot }) => {
       </div>
       <div className="muted" style={{ fontStyle: 'italic', marginBottom: 10 }}>{segs.map((s) => s.text).join(' ') || 'No narration in this shot.'}</div>
       <div className="row wrap" style={{ marginBottom: 8 }}>
-        <button className="btn small" onClick={() => void apply({ op: 'splitShot', shotId: shot.id, atSec: playhead / t.fps })} title="Split at the playhead" data-testid="split-btn">Split at playhead</button>
-        <button className="btn small" disabled={idx === 0} onClick={() => void apply({ op: 'mergeWithPrevious', shotId: shot.id })}>Merge into previous</button>
+        <button className="btn small" onClick={() => void apply({ op: 'splitShot', shotId: shot.id, atSec: playhead > r.startFrame + 8 && playhead < r.endFrame - 8 ? playhead / t.fps : (r.startSec + r.endSec) / 2 })} title="Split at the playhead when it is inside this shot, otherwise in the middle" data-testid="split-btn">Split at playhead</button>
+        <button className="btn small" disabled={idx === 0} onClick={() => void apply({ op: 'mergeWithPrevious', shotId: shot.id })} data-testid="merge-btn">Merge into previous</button>
         <button className="btn small" disabled={idx === 0} onClick={() => void apply({ op: 'moveShot', from: idx, to: idx - 1 })}>Move earlier</button>
         <button className="btn small" disabled={idx === p.shots.length - 1} onClick={() => void apply({ op: 'moveShot', from: idx, to: idx + 1 })}>Move later</button>
         <button className="btn small danger" disabled={idx === 0} onClick={() => confirm(`Delete ${shot.id}?`) && void apply({ op: 'deleteShot', shotId: shot.id })}>Delete</button>

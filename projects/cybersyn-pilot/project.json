@@ -10,8 +10,8 @@
   "sliceRuntimeSec": 90,
   "stage": "edit",
   "createdAt": "2026-10-28T18:59:18.572Z",
-  "updatedAt": "2026-10-28T18:59:23.435Z",
-  "revision": 16,
+  "updatedAt": "2026-10-28T19:26:19.922Z",
+  "revision": 33,
   "settings": {
     "fps": 30,
     "width": 1920,
@@ -210,7 +210,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "1e49f15322ec65",
-        "generatedAt": "2026-10-28T18:59:20.018Z"
+        "generatedAt": "2026-10-28T19:26:16.558Z"
       },
       "locked": false
     },
@@ -246,7 +246,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "00ee5da1116ce6",
-        "generatedAt": "2026-10-28T18:59:20.262Z"
+        "generatedAt": "2026-10-28T19:26:16.779Z"
       },
       "locked": false
     },
@@ -277,7 +277,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "1f3ea4634a0136",
-        "generatedAt": "2026-10-28T18:59:20.471Z"
+        "generatedAt": "2026-10-28T19:26:17.044Z"
       },
       "locked": false
     },
@@ -323,7 +323,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "12847a5a8d0989",
-        "generatedAt": "2026-10-28T18:59:20.690Z"
+        "generatedAt": "2026-10-28T19:26:17.256Z"
       },
       "locked": false
     },
@@ -404,7 +404,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "115c0565fa2248",
-        "generatedAt": "2026-10-28T18:59:20.910Z"
+        "generatedAt": "2026-10-28T19:26:17.485Z"
       },
       "locked": false
     },
@@ -520,7 +520,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "13d850e89a2982",
-        "generatedAt": "2026-10-28T18:59:21.174Z"
+        "generatedAt": "2026-10-28T19:26:17.744Z"
       },
       "locked": false
     },
@@ -621,7 +621,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "04dd99ffca473f",
-        "generatedAt": "2026-10-28T18:59:21.450Z"
+        "generatedAt": "2026-10-28T19:26:18.001Z"
       },
       "locked": false
     },
@@ -697,7 +697,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "0e48965984b0b0",
-        "generatedAt": "2026-10-28T18:59:21.693Z"
+        "generatedAt": "2026-10-28T19:26:18.258Z"
       },
       "locked": false
     },
@@ -741,7 +741,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "0f97a803050182",
-        "generatedAt": "2026-10-28T18:59:21.932Z"
+        "generatedAt": "2026-10-28T19:26:18.483Z"
       },
       "locked": false
     },
@@ -882,7 +882,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "13b2fdbcd166c3",
-        "generatedAt": "2026-10-28T18:59:22.234Z"
+        "generatedAt": "2026-10-28T19:26:18.776Z"
       },
       "locked": false
     },
@@ -1080,7 +1080,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "02e5be61282be2",
-        "generatedAt": "2026-10-28T18:59:22.527Z"
+        "generatedAt": "2026-10-28T19:26:19.040Z"
       },
       "locked": false
     },
@@ -1152,7 +1152,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "1ff11e82dd9769",
-        "generatedAt": "2026-10-28T18:59:22.775Z"
+        "generatedAt": "2026-10-28T19:26:19.244Z"
       },
       "locked": false
     },
@@ -1253,7 +1253,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "13d1729eda2da9",
-        "generatedAt": "2026-10-28T18:59:23.004Z"
+        "generatedAt": "2026-10-28T19:26:19.503Z"
       },
       "locked": false
     },
@@ -1294,7 +1294,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "1ca20749c15b7e",
-        "generatedAt": "2026-10-28T18:59:23.203Z"
+        "generatedAt": "2026-10-28T19:26:19.694Z"
       },
       "locked": false
     },
@@ -1373,7 +1373,7 @@
         "provider": "local-espeak",
         "voice": "en-gb-x-rp",
         "textHash": "04826be5af9c0b",
-        "generatedAt": "2026-10-28T18:59:23.435Z"
+        "generatedAt": "2026-10-28T19:26:19.922Z"
       },
       "locked": false
     }
@@ -2887,7 +2887,21 @@
       "scope": "context"
     }
   ],
-  "renders": [],
+  "renders": [
+    {
+      "id": "full-20261028190702-112f",
+      "kind": "full",
+      "createdAt": "2026-10-28T19:18:56.411Z",
+      "relPath": "renders/full-20261028190702-112f/video.mp4",
+      "ok": true,
+      "durationSec": 86.635,
+      "expectedDurationSec": 86.63333333333334,
+      "width": 1920,
+      "height": 1080,
+      "validationRelPath": "renders/full-20261028190702-112f/validation.json",
+      "inputHash": "12a3354dcae1a7"
+    }
+  ],
   "editorialNotes": [
     {
       "id": "e1",
@@ -2903,6 +2917,11 @@
       "id": "e3",
       "text": "All room, map, telex and screen imagery is original illustration drawn in code and is labelled as reconstruction on screen. Archival photographs and portraits are placeholders until licensed material is assigned.",
       "createdAt": "2026-10-28T18:59:18.572Z"
+    },
+    {
+      "id": "e4",
+      "text": "Source check not done: outbound web access was blocked when this dossier was drafted, so no source (including Medina’s book) was opened. Claims come from the narration draft and general knowledge and all remain unverified. A person must check them against the cited sources before publication.",
+      "createdAt": "2026-10-28T19:25:52.149Z"
     }
   ]
 }

@@ -159,7 +159,13 @@ export async function narrate(ctx: Ctx, opts: NarrateOptions = {}): Promise<Proj
   const st = await provider.status();
   if (!st.ready) throw new Error(`${provider.name} is not available: ${st.reason}`);
 
-  const wanted = project.narration.filter((n) => (!opts.segmentIds || opts.segmentIds.includes(n.id)) && (!n.locked || opts.force) && (opts.force || !n.audio || n.audio.textHash !== segmentTextHash(n) || n.audio.provider !== provider.id));
+  // Audio whose file is gone (for example a fresh clone, where media is not in git) counts as missing.
+  const fileGone = new Set<string>();
+  for (const n of project.narration) {
+    const a = n.audio ? project.assets.find((x) => x.id === n.audio!.assetId) : undefined;
+    if (n.audio && (!a || !(await exists(safeJoin(dir, a.relPath))))) fileGone.add(n.id);
+  }
+  const wanted = project.narration.filter((n) => (!opts.segmentIds || opts.segmentIds.includes(n.id)) && (!n.locked || opts.force) && (opts.force || fileGone.has(n.id) || !n.audio || n.audio.textHash !== segmentTextHash(n) || n.audio.provider !== provider.id));
   if (!wanted.length) {
     ctx.log('All narration is current; nothing to generate.');
     return project;
