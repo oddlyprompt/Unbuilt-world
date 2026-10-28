@@ -1,0 +1,2908 @@
+{
+  "schemaVersion": 1,
+  "id": "cybersyn-pilot",
+  "title": "The Computer That Almost Ran a Country",
+  "channel": "The Unbuilt World",
+  "subject": "Project Cybersyn, Chile, 1971–1973",
+  "tone": "Cinematic but conversational",
+  "perspective": "Curious, thoughtful and historically grounded",
+  "targetRuntimeSec": 1620,
+  "sliceRuntimeSec": 90,
+  "stage": "edit",
+  "createdAt": "2026-10-28T18:59:18.572Z",
+  "updatedAt": "2026-10-28T18:59:23.435Z",
+  "revision": 16,
+  "settings": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "narrationWpm": 160,
+    "leadInSec": 2,
+    "tailSec": 3,
+    "narrationVoice": {
+      "voice": "en-gb-x-rp",
+      "rate": 168,
+      "pitch": 34
+    },
+    "captions": false,
+    "disclosures": true
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "index": 1,
+      "title": "The Room That Shouldn’t Exist",
+      "plannedStart": "00:00",
+      "plannedEnd": "02:00",
+      "summary": "Cold open (this slice, about 90 seconds) and the opening of the story."
+    },
+    {
+      "id": "ch2",
+      "index": 2,
+      "title": "A Country Trying Something Different",
+      "plannedStart": "02:00",
+      "plannedEnd": "06:00"
+    },
+    {
+      "id": "ch3",
+      "index": 3,
+      "title": "The Eccentric British Cybernetician",
+      "plannedStart": "06:00",
+      "plannedEnd": "10:00"
+    },
+    {
+      "id": "ch4",
+      "index": 4,
+      "title": "Building Tomorrow With Yesterday’s Machines",
+      "plannedStart": "10:00",
+      "plannedEnd": "15:00"
+    },
+    {
+      "id": "ch5",
+      "index": 5,
+      "title": "The System’s First Real Test",
+      "plannedStart": "15:00",
+      "plannedEnd": "20:00"
+    },
+    {
+      "id": "ch6",
+      "index": 6,
+      "title": "September 11, 1973",
+      "plannedStart": "20:00",
+      "plannedEnd": "23:00"
+    },
+    {
+      "id": "ch7",
+      "index": 7,
+      "title": "The Future That Never Happened",
+      "plannedStart": "23:00",
+      "plannedEnd": "27:00"
+    }
+  ],
+  "narration": [
+    {
+      "id": "n01",
+      "chapterId": "ch1",
+      "text": "In 1972, a group of engineers in Chile were building something that looked like it belonged on the bridge of a science-fiction spaceship.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [],
+      "audio": {
+        "assetId": "narr-n01",
+        "durationSec": 8.250896,
+        "words": [
+          {
+            "text": "In",
+            "start": 0,
+            "end": 0.167
+          },
+          {
+            "text": "1972,",
+            "start": 0.167,
+            "end": 1.604
+          },
+          {
+            "text": "a",
+            "start": 1.604,
+            "end": 1.723
+          },
+          {
+            "text": "group",
+            "start": 1.723,
+            "end": 2.035
+          },
+          {
+            "text": "of",
+            "start": 2.035,
+            "end": 2.214
+          },
+          {
+            "text": "engineers",
+            "start": 2.214,
+            "end": 2.799
+          },
+          {
+            "text": "in",
+            "start": 2.799,
+            "end": 2.965
+          },
+          {
+            "text": "Chile",
+            "start": 2.965,
+            "end": 3.293
+          },
+          {
+            "text": "were",
+            "start": 3.293,
+            "end": 3.48
+          },
+          {
+            "text": "building",
+            "start": 3.48,
+            "end": 3.914
+          },
+          {
+            "text": "something",
+            "start": 3.914,
+            "end": 4.434
+          },
+          {
+            "text": "that",
+            "start": 4.434,
+            "end": 4.679
+          },
+          {
+            "text": "looked",
+            "start": 4.679,
+            "end": 5.023
+          },
+          {
+            "text": "like",
+            "start": 5.023,
+            "end": 5.319
+          },
+          {
+            "text": "it",
+            "start": 5.319,
+            "end": 5.477
+          },
+          {
+            "text": "belonged",
+            "start": 5.477,
+            "end": 5.921
+          },
+          {
+            "text": "on",
+            "start": 5.921,
+            "end": 5.921
+          },
+          {
+            "text": "the",
+            "start": 5.921,
+            "end": 6.175
+          },
+          {
+            "text": "bridge",
+            "start": 6.175,
+            "end": 6.487
+          },
+          {
+            "text": "of",
+            "start": 6.487,
+            "end": 6.487
+          },
+          {
+            "text": "a",
+            "start": 6.487,
+            "end": 6.707
+          },
+          {
+            "text": "science-fiction",
+            "start": 6.707,
+            "end": 7.582
+          },
+          {
+            "text": "spaceship.",
+            "start": 7.582,
+            "end": 8.250884353741496
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "1e49f15322ec65",
+        "generatedAt": "2026-10-28T18:59:20.018Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n02",
+      "chapterId": "ch1",
+      "text": "Seven futuristic chairs.",
+      "gapBeforeSec": 0.45,
+      "claimIds": [
+        "c-seven-chairs"
+      ],
+      "audio": {
+        "assetId": "narr-n02",
+        "durationSec": 1.687125,
+        "words": [
+          {
+            "text": "Seven",
+            "start": 0,
+            "end": 0.416
+          },
+          {
+            "text": "futuristic",
+            "start": 0.416,
+            "end": 1.192
+          },
+          {
+            "text": "chairs.",
+            "start": 1.192,
+            "end": 1.6871201814058956
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "00ee5da1116ce6",
+        "generatedAt": "2026-10-28T18:59:20.262Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n03",
+      "chapterId": "ch1",
+      "text": "Wall-mounted screens.",
+      "gapBeforeSec": 0.45,
+      "claimIds": [
+        "c-wall-screens"
+      ],
+      "audio": {
+        "assetId": "narr-n03",
+        "durationSec": 1.290625,
+        "words": [
+          {
+            "text": "Wall-mounted",
+            "start": 0,
+            "end": 0.697
+          },
+          {
+            "text": "screens.",
+            "start": 0.697,
+            "end": 1.2906122448979591
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "1f3ea4634a0136",
+        "generatedAt": "2026-10-28T18:59:20.471Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n04",
+      "chapterId": "ch1",
+      "text": "Buttons built into the armrests.",
+      "gapBeforeSec": 0.45,
+      "claimIds": [
+        "c-armrest-buttons"
+      ],
+      "audio": {
+        "assetId": "narr-n04",
+        "durationSec": 1.932708,
+        "words": [
+          {
+            "text": "Buttons",
+            "start": 0,
+            "end": 0.489
+          },
+          {
+            "text": "built",
+            "start": 0.489,
+            "end": 0.808
+          },
+          {
+            "text": "into",
+            "start": 0.808,
+            "end": 1.117
+          },
+          {
+            "text": "the",
+            "start": 1.117,
+            "end": 1.277
+          },
+          {
+            "text": "armrests.",
+            "start": 1.277,
+            "end": 1.9326984126984128
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "12847a5a8d0989",
+        "generatedAt": "2026-10-28T18:59:20.690Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n05",
+      "chapterId": "ch1",
+      "text": "And the whole thing was designed to help run a country’s economy.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-run-economy"
+      ],
+      "audio": {
+        "assetId": "narr-n05",
+        "durationSec": 3.670396,
+        "words": [
+          {
+            "text": "And",
+            "start": 0,
+            "end": 0.194
+          },
+          {
+            "text": "the",
+            "start": 0.194,
+            "end": 0.34
+          },
+          {
+            "text": "whole",
+            "start": 0.34,
+            "end": 0.643
+          },
+          {
+            "text": "thing",
+            "start": 0.643,
+            "end": 0.959
+          },
+          {
+            "text": "was",
+            "start": 0.959,
+            "end": 1.194
+          },
+          {
+            "text": "designed",
+            "start": 1.194,
+            "end": 1.654
+          },
+          {
+            "text": "to",
+            "start": 1.654,
+            "end": 1.841
+          },
+          {
+            "text": "help",
+            "start": 1.841,
+            "end": 2.223
+          },
+          {
+            "text": "run",
+            "start": 2.223,
+            "end": 2.479
+          },
+          {
+            "text": "a",
+            "start": 2.479,
+            "end": 2.59
+          },
+          {
+            "text": "country’s",
+            "start": 2.59,
+            "end": 3.154
+          },
+          {
+            "text": "economy.",
+            "start": 3.154,
+            "end": 3.670385487528345
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "115c0565fa2248",
+        "generatedAt": "2026-10-28T18:59:20.910Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n06",
+      "chapterId": "ch1",
+      "text": "Now, before you picture some enormous supercomputer quietly making decisions about an entire nation, there’s something you should know.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-telex-network"
+      ],
+      "audio": {
+        "assetId": "narr-n06",
+        "durationSec": 8.047854,
+        "words": [
+          {
+            "text": "Now,",
+            "start": 0,
+            "end": 0.538
+          },
+          {
+            "text": "before",
+            "start": 0.538,
+            "end": 0.923
+          },
+          {
+            "text": "you",
+            "start": 0.923,
+            "end": 1.117
+          },
+          {
+            "text": "picture",
+            "start": 1.117,
+            "end": 1.566
+          },
+          {
+            "text": "some",
+            "start": 1.566,
+            "end": 1.853
+          },
+          {
+            "text": "enormous",
+            "start": 1.853,
+            "end": 2.301
+          },
+          {
+            "text": "supercomputer",
+            "start": 2.301,
+            "end": 3.244
+          },
+          {
+            "text": "quietly",
+            "start": 3.244,
+            "end": 3.769
+          },
+          {
+            "text": "making",
+            "start": 3.769,
+            "end": 4.174
+          },
+          {
+            "text": "decisions",
+            "start": 4.174,
+            "end": 4.77
+          },
+          {
+            "text": "about",
+            "start": 4.77,
+            "end": 5.134
+          },
+          {
+            "text": "an",
+            "start": 5.134,
+            "end": 5.286
+          },
+          {
+            "text": "entire",
+            "start": 5.286,
+            "end": 5.714
+          },
+          {
+            "text": "nation,",
+            "start": 5.714,
+            "end": 6.397
+          },
+          {
+            "text": "there’s",
+            "start": 6.397,
+            "end": 6.713
+          },
+          {
+            "text": "something",
+            "start": 6.713,
+            "end": 7.233
+          },
+          {
+            "text": "you",
+            "start": 7.233,
+            "end": 7.391
+          },
+          {
+            "text": "should",
+            "start": 7.391,
+            "end": 7.697
+          },
+          {
+            "text": "know.",
+            "start": 7.697,
+            "end": 8.047845804988663
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "13d850e89a2982",
+        "generatedAt": "2026-10-28T18:59:21.174Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n07",
+      "chapterId": "ch1",
+      "text": "Most of the information feeding this system arrived through machines that were essentially glorified electric typewriters.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-telex-input"
+      ],
+      "audio": {
+        "assetId": "narr-n07",
+        "durationSec": 6.690813,
+        "words": [
+          {
+            "text": "Most",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "text": "of",
+            "start": 0,
+            "end": 0.502
+          },
+          {
+            "text": "the",
+            "start": 0.502,
+            "end": 0.661
+          },
+          {
+            "text": "information",
+            "start": 0.661,
+            "end": 1.369
+          },
+          {
+            "text": "feeding",
+            "start": 1.369,
+            "end": 1.801
+          },
+          {
+            "text": "this",
+            "start": 1.801,
+            "end": 2.035
+          },
+          {
+            "text": "system",
+            "start": 2.035,
+            "end": 2.507
+          },
+          {
+            "text": "arrived",
+            "start": 2.507,
+            "end": 2.919
+          },
+          {
+            "text": "through",
+            "start": 2.919,
+            "end": 3.141
+          },
+          {
+            "text": "machines",
+            "start": 3.141,
+            "end": 3.692
+          },
+          {
+            "text": "that",
+            "start": 3.692,
+            "end": 3.927
+          },
+          {
+            "text": "were",
+            "start": 3.927,
+            "end": 4.108
+          },
+          {
+            "text": "essentially",
+            "start": 4.108,
+            "end": 4.706
+          },
+          {
+            "text": "glorified",
+            "start": 4.706,
+            "end": 5.325
+          },
+          {
+            "text": "electric",
+            "start": 5.325,
+            "end": 5.913
+          },
+          {
+            "text": "typewriters.",
+            "start": 5.913,
+            "end": 6.690793650793651
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "04dd99ffca473f",
+        "generatedAt": "2026-10-28T18:59:21.450Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n08",
+      "chapterId": "ch1",
+      "text": "And the displays? They were considerably less sophisticated than they looked.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-displays-simple"
+      ],
+      "audio": {
+        "assetId": "narr-n08",
+        "durationSec": 4.549583,
+        "words": [
+          {
+            "text": "And",
+            "start": 0,
+            "end": 0.197
+          },
+          {
+            "text": "the",
+            "start": 0.197,
+            "end": 0.345
+          },
+          {
+            "text": "displays?",
+            "start": 0.345,
+            "end": 1.333
+          },
+          {
+            "text": "They",
+            "start": 1.333,
+            "end": 1.532
+          },
+          {
+            "text": "were",
+            "start": 1.532,
+            "end": 1.718
+          },
+          {
+            "text": "considerably",
+            "start": 1.718,
+            "end": 2.477
+          },
+          {
+            "text": "less",
+            "start": 2.477,
+            "end": 2.745
+          },
+          {
+            "text": "sophisticated",
+            "start": 2.745,
+            "end": 3.71
+          },
+          {
+            "text": "than",
+            "start": 3.71,
+            "end": 3.932
+          },
+          {
+            "text": "they",
+            "start": 3.932,
+            "end": 4.13
+          },
+          {
+            "text": "looked.",
+            "start": 4.13,
+            "end": 4.5495691609977325
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "0e48965984b0b0",
+        "generatedAt": "2026-10-28T18:59:21.693Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n09",
+      "chapterId": "ch1",
+      "text": "But here’s the fascinating part.",
+      "gapBeforeSec": 0.7,
+      "claimIds": [],
+      "audio": {
+        "assetId": "narr-n09",
+        "durationSec": 1.912521,
+        "words": [
+          {
+            "text": "But",
+            "start": 0,
+            "end": 0.232
+          },
+          {
+            "text": "here’s",
+            "start": 0.232,
+            "end": 0.607
+          },
+          {
+            "text": "the",
+            "start": 0.607,
+            "end": 0.778
+          },
+          {
+            "text": "fascinating",
+            "start": 0.778,
+            "end": 1.505
+          },
+          {
+            "text": "part.",
+            "start": 1.505,
+            "end": 1.912517006802721
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "0f97a803050182",
+        "generatedAt": "2026-10-28T18:59:21.932Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n10",
+      "chapterId": "ch1",
+      "text": "The people building it weren’t just trying to invent a better computer. They were trying to invent a different way to organize an economy.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-people"
+      ],
+      "audio": {
+        "assetId": "narr-n10",
+        "durationSec": 8.041458,
+        "words": [
+          {
+            "text": "The",
+            "start": 0,
+            "end": 0.172
+          },
+          {
+            "text": "people",
+            "start": 0.172,
+            "end": 0.567
+          },
+          {
+            "text": "building",
+            "start": 0.567,
+            "end": 1.003
+          },
+          {
+            "text": "it",
+            "start": 1.003,
+            "end": 1.167
+          },
+          {
+            "text": "weren’t",
+            "start": 1.167,
+            "end": 1.506
+          },
+          {
+            "text": "just",
+            "start": 1.506,
+            "end": 1.795
+          },
+          {
+            "text": "trying",
+            "start": 1.795,
+            "end": 2.256
+          },
+          {
+            "text": "to",
+            "start": 2.256,
+            "end": 2.436
+          },
+          {
+            "text": "invent",
+            "start": 2.436,
+            "end": 2.891
+          },
+          {
+            "text": "a",
+            "start": 2.891,
+            "end": 3.001
+          },
+          {
+            "text": "better",
+            "start": 3.001,
+            "end": 3.323
+          },
+          {
+            "text": "computer.",
+            "start": 3.323,
+            "end": 4.329
+          },
+          {
+            "text": "They",
+            "start": 4.329,
+            "end": 4.527
+          },
+          {
+            "text": "were",
+            "start": 4.527,
+            "end": 4.71
+          },
+          {
+            "text": "trying",
+            "start": 4.71,
+            "end": 5.172
+          },
+          {
+            "text": "to",
+            "start": 5.172,
+            "end": 5.349
+          },
+          {
+            "text": "invent",
+            "start": 5.349,
+            "end": 5.812
+          },
+          {
+            "text": "a",
+            "start": 5.812,
+            "end": 5.922
+          },
+          {
+            "text": "different",
+            "start": 5.922,
+            "end": 6.359
+          },
+          {
+            "text": "way",
+            "start": 6.359,
+            "end": 6.626
+          },
+          {
+            "text": "to",
+            "start": 6.626,
+            "end": 6.82
+          },
+          {
+            "text": "organize",
+            "start": 6.82,
+            "end": 7.383
+          },
+          {
+            "text": "an",
+            "start": 7.383,
+            "end": 7.53
+          },
+          {
+            "text": "economy.",
+            "start": 7.53,
+            "end": 8.041451247165533
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "13b2fdbcd166c3",
+        "generatedAt": "2026-10-28T18:59:22.234Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n11",
+      "chapterId": "ch1",
+      "text": "One where factories could respond to problems faster. Where government decisions could be informed by current production data. And where the people doing the work might actually have some influence over how the system operated.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-aim-factories",
+        "c-aim-decisions",
+        "c-aim-workers"
+      ],
+      "audio": {
+        "assetId": "narr-n11",
+        "durationSec": 13.500063,
+        "words": [
+          {
+            "text": "One",
+            "start": 0,
+            "end": 0.258
+          },
+          {
+            "text": "where",
+            "start": 0.258,
+            "end": 0.508
+          },
+          {
+            "text": "factories",
+            "start": 0.508,
+            "end": 1.148
+          },
+          {
+            "text": "could",
+            "start": 1.148,
+            "end": 1.401
+          },
+          {
+            "text": "respond",
+            "start": 1.401,
+            "end": 1.853
+          },
+          {
+            "text": "to",
+            "start": 1.853,
+            "end": 2.041
+          },
+          {
+            "text": "problems",
+            "start": 2.041,
+            "end": 2.632
+          },
+          {
+            "text": "faster.",
+            "start": 2.632,
+            "end": 3.474
+          },
+          {
+            "text": "Where",
+            "start": 3.474,
+            "end": 3.722
+          },
+          {
+            "text": "government",
+            "start": 3.722,
+            "end": 4.297
+          },
+          {
+            "text": "decisions",
+            "start": 4.297,
+            "end": 4.904
+          },
+          {
+            "text": "could",
+            "start": 4.904,
+            "end": 5.146
+          },
+          {
+            "text": "be",
+            "start": 5.146,
+            "end": 5.312
+          },
+          {
+            "text": "informed",
+            "start": 5.312,
+            "end": 5.818
+          },
+          {
+            "text": "by",
+            "start": 5.818,
+            "end": 6.039
+          },
+          {
+            "text": "current",
+            "start": 6.039,
+            "end": 6.454
+          },
+          {
+            "text": "production",
+            "start": 6.454,
+            "end": 7.109
+          },
+          {
+            "text": "data.",
+            "start": 7.109,
+            "end": 7.859
+          },
+          {
+            "text": "And",
+            "start": 7.859,
+            "end": 8.08
+          },
+          {
+            "text": "where",
+            "start": 8.08,
+            "end": 8.328
+          },
+          {
+            "text": "the",
+            "start": 8.328,
+            "end": 8.496
+          },
+          {
+            "text": "people",
+            "start": 8.496,
+            "end": 8.891
+          },
+          {
+            "text": "doing",
+            "start": 8.891,
+            "end": 9.191
+          },
+          {
+            "text": "the",
+            "start": 9.191,
+            "end": 9.339
+          },
+          {
+            "text": "work",
+            "start": 9.339,
+            "end": 9.636
+          },
+          {
+            "text": "might",
+            "start": 9.636,
+            "end": 9.923
+          },
+          {
+            "text": "actually",
+            "start": 9.923,
+            "end": 10.468
+          },
+          {
+            "text": "have",
+            "start": 10.468,
+            "end": 10.716
+          },
+          {
+            "text": "some",
+            "start": 10.716,
+            "end": 11.001
+          },
+          {
+            "text": "influence",
+            "start": 11.001,
+            "end": 11.618
+          },
+          {
+            "text": "over",
+            "start": 11.618,
+            "end": 11.929
+          },
+          {
+            "text": "how",
+            "start": 11.929,
+            "end": 12.202
+          },
+          {
+            "text": "the",
+            "start": 12.202,
+            "end": 12.377
+          },
+          {
+            "text": "system",
+            "start": 12.377,
+            "end": 12.848
+          },
+          {
+            "text": "operated.",
+            "start": 12.848,
+            "end": 13.500045351473922
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "02e5be61282be2",
+        "generatedAt": "2026-10-28T18:59:22.527Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n12",
+      "chapterId": "ch1",
+      "text": "Some of it worked. Much of it was never finished.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [
+        "c-some-worked",
+        "c-unfinished"
+      ],
+      "audio": {
+        "assetId": "narr-n12",
+        "durationSec": 3.018521,
+        "words": [
+          {
+            "text": "Some",
+            "start": 0,
+            "end": 0.283
+          },
+          {
+            "text": "of",
+            "start": 0.283,
+            "end": 0.44
+          },
+          {
+            "text": "it",
+            "start": 0.44,
+            "end": 0.608
+          },
+          {
+            "text": "worked.",
+            "start": 0.608,
+            "end": 1.367
+          },
+          {
+            "text": "Much",
+            "start": 1.367,
+            "end": 1.66
+          },
+          {
+            "text": "of",
+            "start": 1.66,
+            "end": 1.818
+          },
+          {
+            "text": "it",
+            "start": 1.818,
+            "end": 1.979
+          },
+          {
+            "text": "was",
+            "start": 1.979,
+            "end": 2.21
+          },
+          {
+            "text": "never",
+            "start": 2.21,
+            "end": 2.545
+          },
+          {
+            "text": "finished.",
+            "start": 2.545,
+            "end": 3.0185034013605443
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "1ff11e82dd9769",
+        "generatedAt": "2026-10-28T18:59:22.775Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n13",
+      "chapterId": "ch1",
+      "text": "And less than two years after the project began, the entire future it represented was gone.",
+      "gapBeforeSec": 0.9,
+      "claimIds": [
+        "c-under-two-years"
+      ],
+      "audio": {
+        "assetId": "narr-n13",
+        "durationSec": 5.542604,
+        "words": [
+          {
+            "text": "And",
+            "start": 0,
+            "end": 0.215
+          },
+          {
+            "text": "less",
+            "start": 0.215,
+            "end": 0.481
+          },
+          {
+            "text": "than",
+            "start": 0.481,
+            "end": 0.726
+          },
+          {
+            "text": "two",
+            "start": 0.726,
+            "end": 0.987
+          },
+          {
+            "text": "years",
+            "start": 0.987,
+            "end": 1.345
+          },
+          {
+            "text": "after",
+            "start": 1.345,
+            "end": 1.718
+          },
+          {
+            "text": "the",
+            "start": 1.718,
+            "end": 1.868
+          },
+          {
+            "text": "project",
+            "start": 1.868,
+            "end": 2.392
+          },
+          {
+            "text": "began,",
+            "start": 2.392,
+            "end": 3.049
+          },
+          {
+            "text": "the",
+            "start": 3.049,
+            "end": 3.211
+          },
+          {
+            "text": "entire",
+            "start": 3.211,
+            "end": 3.651
+          },
+          {
+            "text": "future",
+            "start": 3.651,
+            "end": 4.097
+          },
+          {
+            "text": "it",
+            "start": 4.097,
+            "end": 4.252
+          },
+          {
+            "text": "represented",
+            "start": 4.252,
+            "end": 4.976
+          },
+          {
+            "text": "was",
+            "start": 4.976,
+            "end": 5.21
+          },
+          {
+            "text": "gone.",
+            "start": 5.21,
+            "end": 5.542585034013605
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "13d1729eda2da9",
+        "generatedAt": "2026-10-28T18:59:23.004Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n14",
+      "chapterId": "ch1",
+      "text": "This is Project Cybersyn.",
+      "gapBeforeSec": 1.1,
+      "claimIds": [
+        "c-strangest"
+      ],
+      "audio": {
+        "assetId": "narr-n14",
+        "durationSec": 1.616792,
+        "words": [
+          {
+            "text": "This",
+            "start": 0,
+            "end": 0.242
+          },
+          {
+            "text": "is",
+            "start": 0.242,
+            "end": 0.408
+          },
+          {
+            "text": "Project",
+            "start": 0.408,
+            "end": 0.942
+          },
+          {
+            "text": "Cybersyn.",
+            "start": 0.942,
+            "end": 1.616780045351474
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "1ca20749c15b7e",
+        "generatedAt": "2026-10-28T18:59:23.203Z"
+      },
+      "locked": false
+    },
+    {
+      "id": "n15",
+      "chapterId": "ch1",
+      "text": "And it’s one of the strangest technological experiments of the twentieth century.",
+      "gapBeforeSec": 0.4,
+      "claimIds": [],
+      "audio": {
+        "assetId": "narr-n15",
+        "durationSec": 4.646271,
+        "words": [
+          {
+            "text": "And",
+            "start": 0,
+            "end": 0.194
+          },
+          {
+            "text": "it’s",
+            "start": 0.194,
+            "end": 0.468
+          },
+          {
+            "text": "one",
+            "start": 0.468,
+            "end": 0.728
+          },
+          {
+            "text": "of",
+            "start": 0.728,
+            "end": 0.728
+          },
+          {
+            "text": "the",
+            "start": 0.728,
+            "end": 0.989
+          },
+          {
+            "text": "strangest",
+            "start": 0.989,
+            "end": 1.63
+          },
+          {
+            "text": "technological",
+            "start": 1.63,
+            "end": 2.427
+          },
+          {
+            "text": "experiments",
+            "start": 2.427,
+            "end": 3.212
+          },
+          {
+            "text": "of",
+            "start": 3.212,
+            "end": 3.212
+          },
+          {
+            "text": "the",
+            "start": 3.212,
+            "end": 3.48
+          },
+          {
+            "text": "twentieth",
+            "start": 3.48,
+            "end": 4.061
+          },
+          {
+            "text": "century.",
+            "start": 4.061,
+            "end": 4.64625850340136
+          }
+        ],
+        "alignment": "engine",
+        "provider": "local-espeak",
+        "voice": "en-gb-x-rp",
+        "textHash": "04826be5af9c0b",
+        "generatedAt": "2026-10-28T18:59:23.435Z"
+      },
+      "locked": false
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01",
+      "chapterId": "ch1",
+      "sceneId": "sc-room",
+      "anchor": {
+        "kind": "start"
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "reveal",
+        "dollyFrom": 60,
+        "dollyTo": 330,
+        "heightFrom": -40,
+        "heightTo": 0
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [
+        {
+          "id": "o1",
+          "text": "Chile | 1972",
+          "style": "kicker",
+          "atSec": 0.7,
+          "durSec": 4,
+          "position": "top_left"
+        }
+      ],
+      "transitionIn": {
+        "type": "cut",
+        "durationSec": 0
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-engineers-1972"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready",
+      "notes": "Slow reveal. The room is original illustration; replace with licensed archival photographs of the real room when cleared."
+    },
+    {
+      "id": "s02",
+      "chapterId": "ch1",
+      "sceneId": "sc-room",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n01",
+        "word": 11,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "dollyFrom": 380,
+        "dollyTo": 430,
+        "yawFrom": -34,
+        "yawTo": 14,
+        "heightFrom": -20,
+        "heightTo": -30
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.7
+      },
+      "soundCues": [],
+      "claimIds": [],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s03",
+      "chapterId": "ch1",
+      "sceneId": "sc-room",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n02",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "dollyFrom": 560,
+        "dollyTo": 700,
+        "yawFrom": 6,
+        "yawTo": -4,
+        "heightFrom": -170,
+        "heightTo": -150,
+        "pitchFrom": -4,
+        "pitchTo": -2
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "cut",
+        "durationSec": 0
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-seven-chairs"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s04",
+      "chapterId": "ch1",
+      "sceneId": "sc-room",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n03",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "display_wall",
+      "props": {},
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.45,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "cut",
+        "durationSec": 0
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-wall-screens"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s05",
+      "chapterId": "ch1",
+      "sceneId": "sc-room",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n04",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "chair_closeup",
+      "props": {},
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.6,
+        "focus": {
+          "x": 0.62,
+          "y": 0.6
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "cut",
+        "durationSec": 0
+      },
+      "soundCues": [
+        {
+          "id": "q1",
+          "assetId": "sfx-button",
+          "atSec": 1,
+          "gainDb": -8
+        }
+      ],
+      "claimIds": [
+        "c-armrest-buttons"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s06",
+      "chapterId": "ch1",
+      "sceneId": "sc-nation",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n05",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "historical_photo",
+      "component": "archival_photo",
+      "props": {
+        "needs": "Archival photograph: street scene, Santiago, early 1970s",
+        "detail": "Assign a licensed or public-domain photograph in the Assets tab. This slate then gives way to the photograph.",
+        "caption": "Santiago, early 1970s"
+      },
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.35,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-run-economy"
+      ],
+      "reconstruction": {
+        "isReconstruction": false
+      },
+      "status": "placeholder"
+    },
+    {
+      "id": "s07",
+      "chapterId": "ch1",
+      "sceneId": "sc-nation",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n06",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "panels": 3,
+        "chairs": 5,
+        "dollyFrom": 380,
+        "dollyTo": 300,
+        "yawFrom": 0,
+        "yawTo": 8,
+        "heightFrom": 330,
+        "heightTo": 280,
+        "pitchFrom": 17,
+        "pitchTo": 15
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s08",
+      "chapterId": "ch1",
+      "sceneId": "sc-nation",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n06",
+        "word": 10,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "animated_map",
+      "component": "network_map",
+      "props": {},
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.25,
+        "focus": {
+          "x": 0.5,
+          "y": 0.52
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-telex-network"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "SCHEMATIC MAP · ILLUSTRATIVE"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s09",
+      "chapterId": "ch1",
+      "sceneId": "sc-nation",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n07",
+        "word": 9,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "telex",
+      "props": {},
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.35,
+        "focus": {
+          "x": 0.4,
+          "y": 0.6
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.4
+      },
+      "soundCues": [
+        {
+          "id": "q1",
+          "assetId": "sfx-telex",
+          "atSec": 0.3,
+          "gainDb": -11
+        }
+      ],
+      "claimIds": [
+        "c-telex-input"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATION · MESSAGE INVENTED"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s10",
+      "chapterId": "ch1",
+      "sceneId": "sc-nation",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n08",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "display_wall",
+      "props": {},
+      "camera": {
+        "preset": "pan_right",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.4
+      },
+      "soundCues": [
+        {
+          "id": "q1",
+          "assetId": "sfx-slide-click",
+          "atSec": 0.7,
+          "gainDb": -10
+        }
+      ],
+      "claimIds": [
+        "c-displays-simple"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s11",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n09",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "hideChairs": true,
+        "dollyFrom": 640,
+        "dollyTo": 900,
+        "yawFrom": -3,
+        "yawTo": 3,
+        "heightFrom": -150,
+        "heightTo": -120
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s12",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n10",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "typography",
+      "component": "people_cards",
+      "props": {
+        "stagger": 0.7
+      },
+      "camera": {
+        "preset": "drift",
+        "intensity": 0.3,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-people"
+      ],
+      "reconstruction": {
+        "isReconstruction": false
+      },
+      "status": "placeholder",
+      "notes": "Portraits are drawn placeholders. Assign licensed photographs when cleared."
+    },
+    {
+      "id": "s13",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n11",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "animated_map",
+      "component": "network_map",
+      "props": {},
+      "camera": {
+        "preset": "drift",
+        "intensity": 0.45,
+        "focus": {
+          "x": 0.45,
+          "y": 0.52
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-aim-factories"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "SCHEMATIC MAP · ILLUSTRATIVE"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s14",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n11",
+        "word": 8,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "dollyFrom": 300,
+        "dollyTo": 420,
+        "yawFrom": 38,
+        "yawTo": 22,
+        "heightFrom": -40,
+        "heightTo": -40,
+        "pitchFrom": 2,
+        "pitchTo": 2
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.5
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-aim-decisions"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s15",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n11",
+        "word": 18,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "historical_photo",
+      "component": "archival_photo",
+      "props": {
+        "needs": "Archival photograph: workers at a Chilean factory, early 1970s",
+        "detail": "Assign a licensed or public-domain photograph in the Assets tab.",
+        "caption": "Chile, early 1970s"
+      },
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.3,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.6
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-aim-workers"
+      ],
+      "reconstruction": {
+        "isReconstruction": false
+      },
+      "status": "placeholder"
+    },
+    {
+      "id": "s16",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n12",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "dollyFrom": 420,
+        "dollyTo": 560,
+        "yawFrom": -26,
+        "yawTo": -30,
+        "heightFrom": -110,
+        "heightTo": -90
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.5
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-some-worked"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s17",
+      "chapterId": "ch1",
+      "sceneId": "sc-promise",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n12",
+        "word": 4,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "ops_room",
+      "props": {
+        "mode": "wide",
+        "panels": 3,
+        "chairs": 4,
+        "dollyFrom": 520,
+        "dollyTo": 300,
+        "yawFrom": 0,
+        "yawTo": 0,
+        "heightFrom": 10,
+        "heightTo": 60
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.5
+      },
+      "soundCues": [],
+      "claimIds": [
+        "c-unfinished"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s18",
+      "chapterId": "ch1",
+      "sceneId": "sc-end",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n13",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "technical_illustration",
+      "component": "tonal_shift",
+      "props": {
+        "dollyFrom": 340,
+        "dollyTo": 200,
+        "darkFrom": 0.2,
+        "yawFrom": 18,
+        "yawTo": -6,
+        "heightFrom": 70,
+        "heightTo": 30,
+        "pitchFrom": 6,
+        "pitchTo": 3
+      },
+      "camera": {
+        "preset": "static",
+        "intensity": 0.5,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "fade",
+        "durationSec": 0.8
+      },
+      "soundCues": [
+        {
+          "id": "q1",
+          "assetId": "sfx-powerdown",
+          "atSec": 1.2,
+          "gainDb": -9
+        }
+      ],
+      "claimIds": [
+        "c-under-two-years"
+      ],
+      "reconstruction": {
+        "isReconstruction": true,
+        "label": "ILLUSTRATIVE RECONSTRUCTION · NOT ARCHIVAL"
+      },
+      "status": "ready"
+    },
+    {
+      "id": "s19",
+      "chapterId": "ch1",
+      "sceneId": "sc-end",
+      "anchor": {
+        "kind": "segment",
+        "segmentId": "n14",
+        "word": 0,
+        "offsetSec": 0
+      },
+      "narrationText": "",
+      "category": "typography",
+      "component": "title_reveal",
+      "props": {
+        "kicker": "The Unbuilt World",
+        "title": "Project Cybersyn",
+        "subtitle": "Chile · 1971–1973",
+        "fadeOutSec": 1.6
+      },
+      "camera": {
+        "preset": "push_in",
+        "intensity": 0.12,
+        "focus": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "easing": "inOutSine"
+      },
+      "overlays": [],
+      "transitionIn": {
+        "type": "dip_black",
+        "durationSec": 0.8
+      },
+      "soundCues": [
+        {
+          "id": "q1",
+          "assetId": "sfx-title-hit",
+          "atSec": -0.15,
+          "gainDb": -6
+        }
+      ],
+      "claimIds": [
+        "c-strangest"
+      ],
+      "reconstruction": {
+        "isReconstruction": false
+      },
+      "status": "ready"
+    }
+  ],
+  "assets": [
+    {
+      "id": "music-ambient",
+      "filename": "music_ambient.wav",
+      "relPath": "media/generated/audio/music_ambient.wav",
+      "kind": "music",
+      "mime": "audio/wav",
+      "durationSec": 96,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Ambient bed: D-minor pads with sparse plucks."
+    },
+    {
+      "id": "ambience-room",
+      "filename": "ambience_room.wav",
+      "relPath": "media/generated/audio/ambience_room.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 38,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Low mains hum and air, loops."
+    },
+    {
+      "id": "sfx-telex",
+      "filename": "sfx_telex.wav",
+      "relPath": "media/generated/audio/sfx_telex.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 4,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Teleprinter clatter ending in a carriage bell."
+    },
+    {
+      "id": "sfx-button",
+      "filename": "sfx_button.wav",
+      "relPath": "media/generated/audio/sfx_button.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 0.9,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Soft press and chime."
+    },
+    {
+      "id": "sfx-slide-click",
+      "filename": "sfx_slide_click.wav",
+      "relPath": "media/generated/audio/sfx_slide_click.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 0.5,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Slide projector change."
+    },
+    {
+      "id": "sfx-powerdown",
+      "filename": "sfx_powerdown.wav",
+      "relPath": "media/generated/audio/sfx_powerdown.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 4,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Descending power-down."
+    },
+    {
+      "id": "sfx-title-hit",
+      "filename": "sfx_title_hit.wav",
+      "relPath": "media/generated/audio/sfx_title_hit.wav",
+      "kind": "sfx",
+      "mime": "audio/wav",
+      "durationSec": 5,
+      "origin": "synthesized",
+      "licenseStatus": "own_work",
+      "licenseName": "Synthesized by scripts/synth_audio.py (original, no samples)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": false,
+      "approval": "approved",
+      "notes": "Low boom with shimmer for the title."
+    },
+    {
+      "id": "narr-n01",
+      "filename": "n01.1e49f153.wav",
+      "relPath": "media/generated/narration/n01.1e49f153.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 8.250896,
+      "sha256": "68f053ca29b5ca9bb66dcd4551c5db86e0f28f821c396ef6899651e0593f9059",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n02",
+      "filename": "n02.00ee5da1.wav",
+      "relPath": "media/generated/narration/n02.00ee5da1.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 1.687125,
+      "sha256": "de126a97b09a35f813497d3f16d026c71377450909dff524a0e40fe1a27292c8",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n03",
+      "filename": "n03.1f3ea463.wav",
+      "relPath": "media/generated/narration/n03.1f3ea463.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 1.290625,
+      "sha256": "5048f60156f1a50559cd2ce8a73a09ae6e31718a4c184067f20a2dd8c8a2563f",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n04",
+      "filename": "n04.12847a5a.wav",
+      "relPath": "media/generated/narration/n04.12847a5a.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 1.932708,
+      "sha256": "91108c453ce51b9184ec9e9068db851fe93ee598bb0761f6f73c5cae8fa5020f",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n05",
+      "filename": "n05.115c0565.wav",
+      "relPath": "media/generated/narration/n05.115c0565.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 3.670396,
+      "sha256": "7a88010ce15dd1b8c31888256b48577bf34a98204d0a5363f9b85bbfb0d34eb3",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n06",
+      "filename": "n06.13d850e8.wav",
+      "relPath": "media/generated/narration/n06.13d850e8.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 8.047854,
+      "sha256": "8c92999db84619f11463c144c6afcdbe213ea8ac1e25a1e9a6f7a3a19051aad0",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n07",
+      "filename": "n07.04dd99ff.wav",
+      "relPath": "media/generated/narration/n07.04dd99ff.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 6.690813,
+      "sha256": "b43cb80b8cdc9f7b428f2033bf2a4635916bd8ba064f82a1cc847f7238e9b140",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n08",
+      "filename": "n08.0e489659.wav",
+      "relPath": "media/generated/narration/n08.0e489659.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 4.549583,
+      "sha256": "4bf36a2ed46c955ed72e0f4586df8de58ba8d0e2315a02ee53870a6d0c6c8e6d",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n09",
+      "filename": "n09.0f97a803.wav",
+      "relPath": "media/generated/narration/n09.0f97a803.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 1.912521,
+      "sha256": "93aa097a8581e8d0a648d7c44a22e32228a385695a16873e66eb246ea381a453",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n10",
+      "filename": "n10.13b2fdbc.wav",
+      "relPath": "media/generated/narration/n10.13b2fdbc.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 8.041458,
+      "sha256": "9c31ee82e03ee77b500a3b069d99297c6e78104751e56601fdb6042e29d30221",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n11",
+      "filename": "n11.02e5be61.wav",
+      "relPath": "media/generated/narration/n11.02e5be61.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 13.500063,
+      "sha256": "bce381de4039011a282020e13667b037d141b93f934f663244b8ba8e11dad3df",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n12",
+      "filename": "n12.1ff11e82.wav",
+      "relPath": "media/generated/narration/n12.1ff11e82.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 3.018521,
+      "sha256": "c809025c7e771e47fc3a8b41ce97f70ce090552a07e337022fc8993b82f6d7e0",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n13",
+      "filename": "n13.13d1729e.wav",
+      "relPath": "media/generated/narration/n13.13d1729e.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 5.542604,
+      "sha256": "056d95d1af37ea3c33eb7fa684ae30a5fce3647da855f3bc54027a3280b34fa0",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n14",
+      "filename": "n14.1ca20749.wav",
+      "relPath": "media/generated/narration/n14.1ca20749.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 1.616792,
+      "sha256": "e25371d9ff8171938789df58ff2e327b858e628d460c3d48c31d0ccfa85d7046",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    },
+    {
+      "id": "narr-n15",
+      "filename": "n15.04826be5.wav",
+      "relPath": "media/generated/narration/n15.04826be5.wav",
+      "kind": "audio",
+      "mime": "audio/wav",
+      "durationSec": 4.646271,
+      "sha256": "6fd7ed96be406e8e5a2ab2975cd9a9f026aebb1c1213bbca773a1e9366585949",
+      "origin": "generated_local",
+      "licenseStatus": "own_work",
+      "licenseName": "Local espeak-ng (offline scratch voice)",
+      "attributionRequired": false,
+      "aiGenerated": false,
+      "placeholder": true,
+      "approval": "pending",
+      "notes": "Offline scratch voice. Replace before publication."
+    }
+  ],
+  "audio": {
+    "narrationGainDb": 0,
+    "music": [
+      {
+        "id": "bed",
+        "assetId": "music-ambient",
+        "startSec": 0,
+        "gainDb": -20,
+        "fadeInSec": 2.5,
+        "fadeOutSec": 4,
+        "loop": true,
+        "keyframes": [
+          {
+            "atSec": 0.5,
+            "shotId": "s18",
+            "gainDb": 0
+          },
+          {
+            "atSec": 5,
+            "shotId": "s18",
+            "gainDb": -24
+          },
+          {
+            "atSec": 0.3,
+            "shotId": "s19",
+            "gainDb": -24
+          },
+          {
+            "atSec": 3.2,
+            "shotId": "s19",
+            "gainDb": 1
+          }
+        ],
+        "duck": {
+          "enabled": true,
+          "amountDb": 8,
+          "attackMs": 90,
+          "releaseMs": 700
+        }
+      },
+      {
+        "id": "room",
+        "assetId": "ambience-room",
+        "startSec": 0,
+        "gainDb": -32,
+        "fadeInSec": 3,
+        "fadeOutSec": 1,
+        "loop": true,
+        "keyframes": [
+          {
+            "atSec": 0.5,
+            "shotId": "s18",
+            "gainDb": 0
+          },
+          {
+            "atSec": 4.5,
+            "shotId": "s18",
+            "gainDb": -40
+          }
+        ],
+        "duck": {
+          "enabled": false,
+          "amountDb": 0,
+          "attackMs": 80,
+          "releaseMs": 500
+        }
+      }
+    ],
+    "targetLufs": -16,
+    "truePeakDb": -1.5
+  },
+  "sources": [
+    {
+      "id": "src-medina-2011",
+      "title": "Cybernetic Revolutionaries: Technology and Politics in Allende’s Chile",
+      "kind": "book",
+      "author": "Eden Medina",
+      "url": "https://mitpress.mit.edu/9780262515962/cybernetic-revolutionaries/",
+      "publisher": "MIT Press",
+      "year": 2011,
+      "tier": "secondary"
+    },
+    {
+      "id": "src-medina-2006",
+      "title": "Designing Freedom, Regulating a Nation: Socialist Cybernetics in Allende’s Chile",
+      "kind": "article",
+      "author": "Eden Medina",
+      "publisher": "Journal of Latin American Studies 38(3)",
+      "year": 2006,
+      "tier": "secondary"
+    },
+    {
+      "id": "src-beer-1981",
+      "title": "Brain of the Firm (2nd ed.)",
+      "kind": "book",
+      "author": "Stafford Beer",
+      "publisher": "John Wiley & Sons",
+      "year": 1981,
+      "tier": "primary"
+    },
+    {
+      "id": "src-beer-1975",
+      "title": "Platform for Change",
+      "kind": "book",
+      "author": "Stafford Beer",
+      "publisher": "John Wiley & Sons",
+      "year": 1975,
+      "tier": "primary"
+    }
+  ],
+  "claims": [
+    {
+      "id": "c-engineers-1972",
+      "text": "During 1972 a group of engineers in Chile was building the operations room.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Check construction dates of the room (1972–73) against Medina ch. 4–5.",
+      "scope": "context"
+    },
+    {
+      "id": "c-seven-chairs",
+      "text": "The operations room had seven chairs.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Check count and arrangement against Medina and photographs.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-wall-screens",
+      "text": "The room had wall-mounted screens.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-armrest-buttons",
+      "text": "The chairs had buttons built into the armrests.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Check what the buttons were wired to. The narration does not claim they controlled the live system.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-run-economy",
+      "text": "The system was designed to help run the Chilean economy.",
+      "status": "interpretation",
+      "sourceIds": [
+        "src-medina-2011",
+        "src-beer-1981"
+      ],
+      "origin": "draft_narration",
+      "note": "Intent, not demonstrated capability: \"help coordinate state-managed industry\" is closer to the sources than \"run\".",
+      "scope": "intended"
+    },
+    {
+      "id": "c-telex-network",
+      "text": "A telex network linked enterprises to the centre in Santiago.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Check the extent of the network and which enterprises were connected. The map in the video is schematic.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-telex-input",
+      "text": "Most of the information fed to the system arrived by telex machines.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "\"Glorified electric typewriters\" is a narrator’s characterisation. Confirm the \"most\" and the machines used.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-displays-simple",
+      "text": "The room’s displays were much less sophisticated than they appeared (not computer-driven graphics).",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Confirm how the screens produced their images before this line is final.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-people",
+      "text": "Stafford Beer, Fernando Flores, Gui Bonsiepe and Salvador Allende were central people in the story.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Check each role description on the name cards.",
+      "scope": "context"
+    },
+    {
+      "id": "c-aim-factories",
+      "text": "One aim was for factories to respond to problems faster.",
+      "status": "interpretation",
+      "sourceIds": [
+        "src-medina-2011",
+        "src-beer-1975"
+      ],
+      "origin": "draft_narration",
+      "scope": "intended"
+    },
+    {
+      "id": "c-aim-decisions",
+      "text": "One aim was for government decisions to be informed by current production data.",
+      "status": "interpretation",
+      "sourceIds": [
+        "src-medina-2011",
+        "src-beer-1975"
+      ],
+      "origin": "draft_narration",
+      "scope": "intended"
+    },
+    {
+      "id": "c-aim-workers",
+      "text": "One aim was for workers to have some influence over how the system operated.",
+      "status": "disputed",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Worker participation was an ideal of the design; scholarship disagrees about how far it was realised. The narration says \"might\", which is right. Keep it as intent.",
+      "scope": "intended"
+    },
+    {
+      "id": "c-some-worked",
+      "text": "Some parts of the system worked, including use during the October 1972 truck owners’ strike.",
+      "status": "disputed",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "How much the system mattered in the strike is contested. The line \"Some of it worked\" is safe; any stronger claim needs a source.",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-unfinished",
+      "text": "Much of the project was never finished.",
+      "status": "needs_verification",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "scope": "demonstrated"
+    },
+    {
+      "id": "c-under-two-years",
+      "text": "The project ended less than two years after it began (Sept 1973 coup).",
+      "status": "interpretation",
+      "sourceIds": [
+        "src-medina-2011"
+      ],
+      "origin": "draft_narration",
+      "note": "Depends on the start date: first contact with Beer was in 1971. Check the month so \"less than two years\" holds.",
+      "scope": "context"
+    },
+    {
+      "id": "c-strangest",
+      "text": "\"One of the strangest technological experiments of the twentieth century.\"",
+      "status": "interpretation",
+      "sourceIds": [],
+      "origin": "draft_narration",
+      "note": "Editorial judgement, presented as the narrator’s view.",
+      "scope": "context"
+    }
+  ],
+  "renders": [],
+  "editorialNotes": [
+    {
+      "id": "e1",
+      "text": "Narration is the owner’s draft, split at sentence level only. Nothing was reworded. Historical wording marked in the dossier still needs checking against the sources.",
+      "createdAt": "2026-10-28T18:59:18.572Z"
+    },
+    {
+      "id": "e2",
+      "text": "The voice is an offline scratch voice (espeak-ng). It exists so timing, mix and render can be proven without an account. Replace it with a real narration by importing audio or using a TTS provider.",
+      "createdAt": "2026-10-28T18:59:18.572Z"
+    },
+    {
+      "id": "e3",
+      "text": "All room, map, telex and screen imagery is original illustration drawn in code and is labelled as reconstruction on screen. Archival photographs and portraits are placeholders until licensed material is assigned.",
+      "createdAt": "2026-10-28T18:59:18.572Z"
+    }
+  ]
+}
