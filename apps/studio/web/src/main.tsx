@@ -1,0 +1,7 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
+import '../../../../packages/renderer/src/web-fonts.css';
+import { App } from './App';
+
+createRoot(document.getElementById('root')!).render(<App />);
