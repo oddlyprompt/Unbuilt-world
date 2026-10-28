@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.studio/
+.cache/
+*.log
+# Generated media is reproducible with `npm run pilot:assets` and not stored in git.
+projects/*/media/
+projects/*/.history/
+projects/*/renders/
+projects/*/.build/
+test-results/
+playwright-report/
+.env
+.env.*

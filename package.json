@@ -1,0 +1,51 @@
+{
+  "name": "the-unbuilt-world-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-first AI-assisted documentary production studio for The Unbuilt World.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "setup": "npm install && python3 -m pip install -r requirements.txt && npm run pilot:assets",
+    "studio": "node --import tsx --disable-warning=ExperimentalWarning apps/studio/server/main.ts",
+    "studio:web": "vite --config apps/studio/vite.config.ts",
+    "studio:build": "vite build --config apps/studio/vite.config.ts",
+    "remotion": "remotion studio packages/renderer/src/remotion/index.ts",
+    "pilot:assets": "tsx scripts/build-pilot-assets.ts",
+    "pilot:narrate": "tsx scripts/cli.ts narrate cybersyn-pilot",
+    "pilot:render": "tsx scripts/cli.ts render cybersyn-pilot full",
+    "pilot:preview": "tsx scripts/cli.ts render cybersyn-pilot preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test --config tests/e2e/playwright.config.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.14.1",
+    "@remotion/bundler": "4.0.539",
+    "@remotion/cli": "4.0.539",
+    "@remotion/player": "4.0.539",
+    "@remotion/renderer": "4.0.539",
+    "hono": "4.7.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.539",
+    "zod": "3.24.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.52.0",
+    "@types/node": "22.15.3",
+    "@types/react": "18.3.20",
+    "@types/react-dom": "18.3.6",
+    "@vitejs/plugin-react": "4.4.1",
+    "tsx": "4.19.3",
+    "typescript": "5.8.3",
+    "vite": "6.3.2",
+    "vitest": "3.1.2"
+  }
+}
