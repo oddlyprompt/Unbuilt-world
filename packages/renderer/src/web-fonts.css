@@ -1,0 +1,8 @@
+@font-face { font-family: 'Cormorant'; font-weight: 500; font-style: normal; src: url('../assets/fonts/cormorant-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant'; font-weight: 600; font-style: normal; src: url('../assets/fonts/cormorant-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant'; font-weight: 500; font-style: italic; src: url('../assets/fonts/cormorant-latin-500-italic.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans'; font-weight: 400; src: url('../assets/fonts/ibm-plex-sans-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans'; font-weight: 500; src: url('../assets/fonts/ibm-plex-sans-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans'; font-weight: 600; src: url('../assets/fonts/ibm-plex-sans-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 400; src: url('../assets/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 500; src: url('../assets/fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2'); }
