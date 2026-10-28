@@ -24,7 +24,7 @@ const chrome = '/opt/pw-browsers/chromium-1243/chrome-linux64/chrome';
 
 export default defineConfig({
   testDir: '.',
-  testMatch: '*.spec.ts',
+  testMatch: 'studio.spec.ts',
   timeout: 240_000,
   expect: { timeout: 20_000 },
   workers: 1,

@@ -254,3 +254,17 @@ export function formatTime(sec: number): string {
   const s = sec - m * 60;
   return `${m}:${s.toFixed(1).padStart(4, '0')}`;
 }
+
+/** Hash of everything that changes the mixed audio. Same value in the browser and on the server. */
+export function mixHash(project: Project, timeline: Timeline): string {
+  return hashString(
+    JSON.stringify({
+      a: project.audio,
+      n: timeline.segments.map((s) => [s.id, s.startSec, s.audioAssetId]),
+      sh: project.shots.map((s, i) => [s.id, timeline.shots[i]!.startSec, s.soundCues]),
+      f: project.assets.filter((a) => a.kind === 'audio' || a.kind === 'music' || a.kind === 'sfx').map((a) => [a.id, a.sha256]),
+      t: timeline.totalFrames,
+    }),
+  );
+}
+

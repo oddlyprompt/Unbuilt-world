@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { api, fmt, op, post, type Job, type ProjectState } from './api';
-import { Badge, useToast } from './ui';
+import { Badge, DownloadButton, useToast } from './ui';
+import type { Mode } from './backend';
 import { Storyboard } from './tabs/Storyboard';
 import { ScriptTab } from './tabs/Script';
 import { AssetsTab } from './tabs/Assets';
@@ -39,7 +40,7 @@ const TABS: [string, string][] = [
   ['render', 'Render'],
 ];
 
-export const ProjectView: React.FC<{ id: string; tab: string }> = ({ id, tab }) => {
+export const ProjectView: React.FC<{ id: string; tab: string; mode: Mode }> = ({ id, tab }) => {
   const [state, setState] = useState<ProjectState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -143,7 +144,7 @@ export const ProjectView: React.FC<{ id: string; tab: string }> = ({ id, tab }) 
           </a>
         ))}
         <span className="grow" />
-        <a className="btn small" href={`/api/projects/${id}/export`}>Export project.json</a>
+        <DownloadButton small path={`/api/projects/${id}/export`} filename={`${id}.project.json`}>Export project.json</DownloadButton>
       </div>
       {tab === 'storyboard' && <Storyboard />}
       {tab === 'script' && <ScriptTab />}

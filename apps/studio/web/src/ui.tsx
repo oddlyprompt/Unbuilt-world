@@ -41,3 +41,28 @@ export function useToast() {
 }
 
 export const bytes = (n?: number) => (n === undefined ? '' : n > 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`);
+
+/** Downloads work the same in both modes: fetch through the app's backend layer, then save the blob. */
+export const DownloadButton: React.FC<{ path: string; filename: string; children: React.ReactNode; small?: boolean }> = ({ path, filename, children, small }) => (
+  <button
+    className={`btn${small ? ' small' : ''}`}
+    onClick={async () => {
+      const r = await fetch(path);
+      if (!r.ok) return alert('Download failed.');
+      const url = URL.createObjectURL(await r.blob());
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    }}
+  >
+    {children}
+  </button>
+);
+
+export const DemoNotice: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="issue warning" data-testid="demo-notice" style={{ marginBottom: 14 }}>
+    <b>Demo mode.</b> {children} Connect a studio backend (top right) to enable it.
+  </div>
+);

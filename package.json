@@ -15,7 +15,7 @@
     "setup": "npm install && python3 -m pip install -r requirements.txt && npm run pilot:assets",
     "studio": "node --import tsx --disable-warning=ExperimentalWarning apps/studio/server/main.ts",
     "studio:web": "vite --config apps/studio/vite.config.ts",
-    "studio:build": "vite build --config apps/studio/vite.config.ts",
+    "studio:build": "vite build --config apps/studio/vite.config.ts --mode server",
     "remotion": "remotion studio packages/renderer/src/remotion/index.ts",
     "pilot:assets": "tsx scripts/build-pilot-assets.ts",
     "pilot:narrate": "tsx scripts/cli.ts narrate cybersyn-pilot",
@@ -23,7 +23,11 @@
     "pilot:preview": "tsx scripts/cli.ts render cybersyn-pilot preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test --config tests/e2e/playwright.config.ts"
+    "test:e2e": "playwright test --config tests/e2e/playwright.config.ts",
+    "studio:build:pages": "vite build --config apps/studio/vite.config.ts --mode pages",
+    "demo:data": "tsx scripts/build-demo-data.ts",
+    "test:e2e:pages": "playwright test --config tests/e2e/playwright.pages.config.ts",
+    "test:e2e:remote": "playwright test --config tests/e2e/playwright.remote.config.ts"
   },
   "dependencies": {
     "@hono/node-server": "1.14.1",

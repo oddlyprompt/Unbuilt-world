@@ -9,6 +9,8 @@ interface Preview {
   props: EpisodeProps;
   mixReady: boolean;
   mixHash: string;
+  mixStale?: boolean;
+  demo?: boolean;
 }
 
 /** The composition played in the browser with the real mix. Rebuilt whenever the project revision changes. */
@@ -77,7 +79,7 @@ export const PreviewPlayer: React.FC = () => {
         />
       </div>
       <div className="muted mono" style={{ marginTop: 4 }} data-testid="mix-status">
-        {preview.mixReady ? 'Audio: current mix loaded.' : 'Audio: building the mix for the latest edits… (picture is live, sound follows)'}
+        {!preview.mixReady ? 'Audio: building the mix for the latest edits… (picture is live, sound follows)' : preview.mixStale ? 'Audio: the original mix. You changed timing or sound, and re-mixing needs the backend, so sound will not follow your edits. The picture is live.' : preview.demo ? 'Audio: the pilot\'s mix (matches the current timing).' : 'Audio: current mix loaded.'}
       </div>
     </div>
   );

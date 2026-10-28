@@ -15,6 +15,13 @@ storyboard, narration script and research dossier, and renders to a ~87 second c
 > The narration voice is an **offline scratch voice**. Every historical claim in the dossier is still
 > *needs verification*, *interpretation* or *disputed*; nothing is marked verified.
 
+## Use it from a browser (PC or phone)
+
+The interface is a static website (`npm run studio:build:pages`). On GitHub Pages it runs in **demo mode**: projects, storyboard
+editing, live previews and asset management all work in the browser with no server; rendering, narration and re-mixing need the
+backend, which you host separately and connect from the **Backend** button. Full details, hosting requirements and security:
+[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). Deployment workflow: `.github/workflows/pages.yml`; Vercel: `vercel.json`.
+
 ## Requirements
 
 | Tool | Version | Used for |
@@ -66,7 +73,9 @@ only if the validation passes (see below).
 ```bash
 npm run typecheck
 npm test                 # unit + integration (integration renders real video; allow a few minutes)
-npm run test:e2e         # Playwright: builds the studio and drives it in a browser (a few minutes)
+npm run test:e2e         # Playwright against the Node studio (a few minutes)
+npm run test:e2e:pages   # the static website alone, desktop and iPhone-sized viewport
+npm run test:e2e:remote  # static website + separate backend with token and CORS
 ```
 
 The integration and end-to-end tests run on a temporary copy of the pilot. No test makes a paid API call.

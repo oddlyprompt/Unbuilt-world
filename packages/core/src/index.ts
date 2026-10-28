@@ -6,3 +6,5 @@ export * from './design';
 export * from './util';
 export * from './check';
 export * from './script';
+export * from './apply-op';
+export * from './factory';

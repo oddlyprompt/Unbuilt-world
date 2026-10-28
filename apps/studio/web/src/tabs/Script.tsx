@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import { segmentTextHash, tokenize, wordCount, spokenSecondsAt } from '@uw/core';
 import { fmt, mediaUrl } from '../api';
-import { Badge, NumberInput } from '../ui';
+import { Badge, DemoNotice, DownloadButton, NumberInput } from '../ui';
+import { getMode } from '../backend';
 import { useCtx } from '../ProjectView';
 
 export const ScriptTab: React.FC = () => {
@@ -20,6 +21,7 @@ export const ScriptTab: React.FC = () => {
 
   return (
     <div>
+      {getMode().kind === 'demo' && <DemoNotice>You can edit the script, pauses and locks, and import recordings. Generating or regenerating narration needs the speech engine on the backend.</DemoNotice>}
       <div className="row wrap" style={{ marginBottom: 14 }}>
         <Badge>{words} words</Badge>
         <Badge title="Words ÷ narration pace, without pauses">≈ {fmt(spokenSecondsAt(words, p.settings.narrationWpm))} at {p.settings.narrationWpm} wpm</Badge>
@@ -28,7 +30,7 @@ export const ScriptTab: React.FC = () => {
         <button className="btn primary" disabled={!missing} data-testid="narrate-missing" onClick={async () => { const j = await startJob('narrate', { provider: 'local-espeak' }); if (j) toast('Generating scratch narration…'); }}>
           Generate missing narration ({missing}) with the local voice
         </button>
-        {(['md', 'json', 'txt'] as const).map((f) => <a key={f} className="btn" href={`/api/projects/${id}/script?format=${f}`}>Export .{f}</a>)}
+        {(['md', 'json', 'txt'] as const).map((f) => <DownloadButton key={f} path={`/api/projects/${id}/script?format=${f}`} filename={`${id}-script.${f}`}>Export .{f}</DownloadButton>)}
       </div>
       <div className="muted" style={{ marginBottom: 14, maxWidth: 900 }}>
         The local voice is an offline scratch narrator so timing and mix can be checked without any account. A paid provider (ElevenLabs) is built in but needs your own key and an explicit confirmation before any batch.

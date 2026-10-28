@@ -58,7 +58,7 @@ export const Storyboard: React.FC = () => {
                   <tr key={s.id} className={`clickable ${sel?.id === s.id ? 'sel' : ''}`} onClick={() => { select(s.id); seek(r.startFrame); }} data-testid={`shot-row-${s.id}`}>
                     <td className="mono">{s.id}</td>
                     <td className="mono">{fmt(r.startSec)}</td>
-                    <td onClick={(e) => e.stopPropagation()}>
+                    <td onClick={(e) => { e.stopPropagation(); select(s.id); }}>
                       <DurationInput shotId={s.id} value={r.endSec - r.startSec} />
                     </td>
                     <td>{s.component.replace(/_/g, ' ')}</td>

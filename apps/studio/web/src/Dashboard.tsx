@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { api, fmt, post, type ProjectSummary } from './api';
 import { Badge, useToast } from './ui';
+import { mediaUrl, type Mode } from './backend';
 
-export const Dashboard: React.FC = () => {
+export const Dashboard: React.FC<{ mode: Mode }> = ({ mode }) => {
   const [list, setList] = useState<ProjectSummary[] | null>(null);
   const [form, setForm] = useState({ title: '', subject: '', minutes: 27 });
   const toast = useToast();
@@ -36,6 +37,7 @@ export const Dashboard: React.FC = () => {
         <input ref={fileRef} type="file" accept="application/json,.json" hidden data-testid="import-input" onChange={(e) => e.target.files?.[0] && importFile(e.target.files[0])} />
         <button className="btn" onClick={() => fileRef.current?.click()}>Import project.json</button>
       </div>
+      {mode.kind === 'demo' && <div className="issue info" style={{ marginTop: 12, maxWidth: 900 }}>This is the live demo. Projects, edits and uploads live in <b>this browser</b> and the storyboard preview runs here. Rendering MP4s and generating narration need a studio backend (see the Backend button).</div>}
       <div className="cards" data-testid="project-cards">
         {list === null && <div className="muted">Loading…</div>}
         {list?.map((p) =>
@@ -69,7 +71,7 @@ export const Dashboard: React.FC = () => {
               <div className="row" style={{ marginTop: 12 }}>
                 <a className="btn primary" href={`#/p/${p.id}/storyboard`} data-testid={`open-${p.id}`}>Open</a>
                 <a className="btn" href={`#/p/${p.id}/render`}>Renders</a>
-                {p.lastRender && <a className="btn" href={`/media/${p.id}/${p.lastRender.relPath}`} target="_blank" rel="noreferrer">Open last video</a>}
+                {p.lastRender && <a className="btn" href={mediaUrl(p.id, p.lastRender.relPath)} target="_blank" rel="noreferrer">Open last video</a>}
               </div>
             </div>
           ),

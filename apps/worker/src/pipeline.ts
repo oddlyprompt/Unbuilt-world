@@ -5,6 +5,7 @@ import { makeCancelSignal, renderMedia, selectComposition } from '@remotion/rend
 import {
   checkProject,
   hashString,
+  mixHash,
   nowIso,
   renderInputHash,
   resolveTimeline,
@@ -254,18 +255,6 @@ export async function assetFiles(dir: string, project: Project): Promise<Map<str
   return m;
 }
 
-export function mixHash(project: Project, timeline: Timeline): string {
-  return hashString(
-    JSON.stringify({
-      a: project.audio,
-      n: timeline.segments.map((s) => [s.id, s.startSec, s.audioAssetId]),
-      sh: project.shots.map((s, i) => [s.id, timeline.shots[i]!.startSec, s.soundCues]),
-      f: project.assets.filter((a) => a.kind === 'audio' || a.kind === 'music' || a.kind === 'sfx').map((a) => [a.id, a.sha256]),
-      t: timeline.totalFrames,
-    }),
-  );
-}
-
 /** The finished audio mix for the current state of the project, reused when nothing relevant changed. */
 export async function ensureMix(ctx: Ctx, project: Project, timeline: Timeline): Promise<{ file: string; relPath: string; notes: string[]; reused: boolean }> {
   const h = mixHash(project, timeline);
@@ -479,4 +468,4 @@ export async function renderProject(ctx: Ctx, opts: RenderOptions): Promise<Rend
   }
 }
 
-export { analyzeAudio };
+export { analyzeAudio, mixHash };

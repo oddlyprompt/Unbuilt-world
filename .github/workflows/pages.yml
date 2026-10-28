@@ -1,0 +1,62 @@
+name: Deploy studio website to GitHub Pages
+
+# Builds the static studio (demo mode in the browser; connects to a backend if you give it one),
+# deploys it, then runs the browser tests against the LIVE URL.
+on:
+  push:
+    branches: [main, claude/wizardly-cori-q8s2k2]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npx vitest run packages/core
+      - run: npm run studio:build:pages
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/studio/dist-pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  verify-live:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get install -y ffmpeg
+      - name: Browser tests against the deployed site
+        run: npx playwright test --config tests/e2e/playwright.pages.config.ts
+        env:
+          UW_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/

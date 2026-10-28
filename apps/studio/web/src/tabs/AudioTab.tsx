@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../api';
-import { Badge, Field, NumberInput } from '../ui';
+import { Badge, DemoNotice, Field, NumberInput } from '../ui';
+import { getMode } from '../backend';
 import { useCtx } from '../ProjectView';
 
 interface Analysis { peakDb: number; meanDb: number; integratedLufs?: number; truePeakDb?: number; loudnessRange?: number; silences: { start: number; duration: number }[]; warnings: string[]; clipped: boolean }
@@ -11,12 +12,16 @@ export const AudioTab: React.FC = () => {
   const [analysis, setAnalysis] = useState<Analysis | null>(null);
   const [note, setNote] = useState('');
   const load = () => api<Analysis>(`/api/projects/${id}/analyze-mix`).then((x) => { setAnalysis(x); setNote(''); }).catch((e) => { setAnalysis(null); setNote(e.message); });
-  useEffect(() => void load(), [state.mixHash]);
+  // Re-analyse when the mix changes AND when a mix job finishes (the file may only exist after that).
+  const mixesDone = jobs.filter((j) => j.type === 'mix' && j.status === 'succeeded').length;
+  useEffect(() => void load(), [state.mixHash, mixesDone]);
   const mixing = jobs.some((j) => j.type === 'mix' && (j.status === 'running' || j.status === 'queued'));
 
   const setMusic = (trackId: string, patch: Record<string, unknown>) => apply({ op: 'updateAudio', patch: { music: a.music.map((m) => (m.id === trackId ? { ...m, ...patch } : m)) } });
 
   return (
+    <div>
+    {getMode().kind === 'demo' && <DemoNotice>Gain, fade and ducking settings are editable and saved. Re-mixing and loudness analysis run on the backend, so the preview keeps playing the original mix.</DemoNotice>}
     <div className="split" style={{ gridTemplateColumns: '1fr 1fr' }}>
       <div>
         <div className="panel">
@@ -64,6 +69,7 @@ export const AudioTab: React.FC = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -59,7 +59,7 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
 
 export const post = <T,>(path: string, body: unknown) => api<T>(path, { method: 'POST', body: JSON.stringify(body) });
 export const op = (id: string, body: Record<string, unknown>) => post<ProjectState>(`/api/projects/${id}/ops`, body);
-export const mediaUrl = (id: string, rel: string) => `/media/${id}/${rel.split('/').map(encodeURIComponent).join('/')}`;
+export { mediaUrl } from './backend';
 
 export const fmt = (sec: number) => {
   const m = Math.floor(sec / 60);

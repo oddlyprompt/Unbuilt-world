@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { api, fmt, mediaUrl, post, type Job } from '../api';
-import { Badge } from '../ui';
+import { Badge, DemoNotice } from '../ui';
+import { getMode } from '../backend';
 import { useCtx } from '../ProjectView';
 
 interface Check { name: string; ok: boolean; detail: string; required: boolean }
@@ -78,6 +79,8 @@ export const RenderTab: React.FC = () => {
   };
   void select;
   return (
+    <div>
+    {getMode().kind === 'demo' && <DemoNotice>The render buttons below need ffmpeg and Chromium on the backend. The finished render on the right is the real validated 1080p export of this project; the in-browser preview on the Storyboard tab is live.</DemoNotice>}
     <div className="split" style={{ gridTemplateColumns: 'minmax(420px, 1fr) minmax(480px, 1.2fr)' }}>
       <div>
         <div className="panel">
@@ -108,6 +111,7 @@ export const RenderTab: React.FC = () => {
           {[...p.renders].reverse().map((r) => <RenderResult key={r.id} renderId={r.id} relPath={r.relPath} ok={r.ok} kind={r.kind} dur={r.durationSec} exp={r.expectedDurationSec} />)}
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -2,32 +2,32 @@ import { promises as fs, createReadStream } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Hono } from 'hono';
+import { cors } from 'hono/cors';
+import { timingSafeEqual } from 'node:crypto';
 import { serve } from '@hono/node-server';
 import { z } from 'zod';
 import {
   ProjectSchema,
   SCHEMA_VERSION,
-  assignAsset,
+  Op,
+  OpError,
+  applyOp,
   checkProject,
-  deleteShot,
+  createBlankProject,
   exportScript,
-  mergeWithPrevious,
   migrateProject,
-  moveShot,
+  mixHash,
   nowIso,
   resolveTimeline,
-  setShotDuration,
   slug,
-  splitShot,
   uniqueId,
-  updateShot,
   type Project,
 } from '@uw/core';
 import { listHistory, listProjects, loadProject, saveProject, safeJoin, ProjectLoadError } from '@uw/core/node';
 import { analyzeAudio } from '@uw/media';
 import { LocalEspeakProvider, PROVIDER_CATALOG, UsageLedger, configuredProviders, redact } from '@uw/providers';
 import { composeEpisode } from '@uw/renderer';
-import { importAsset, importNarration, mixHash, syncAssetMetadata } from '../../worker/src/pipeline';
+import { importAsset, importNarration, syncAssetMetadata } from '../../worker/src/pipeline';
 import { mimeFor } from '../../worker/src/files';
 import { JobManager } from './jobs';
 
@@ -80,6 +80,22 @@ async function projectState(id: string) {
 
 const app = new Hono();
 
+// ---- access control for a separately hosted backend -------------------------------------------
+// UW_STUDIO_TOKEN: shared bearer token for the API and media (header "Authorization: Bearer …" or ?token=… for <img>/<audio>).
+// UW_ALLOWED_ORIGINS: comma-separated browser origins allowed by CORS, e.g. https://oddlyprompt.github.io
+// The token only gates this studio; provider API keys never leave the server.
+const TOKEN = process.env.UW_STUDIO_TOKEN || '';
+const ORIGINS = (process.env.UW_ALLOWED_ORIGINS ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+app.use('*', cors({ origin: (o) => (ORIGINS.includes('*') || ORIGINS.includes(o) ? o : ''), allowHeaders: ['authorization', 'content-type'], allowMethods: ['GET', 'POST', 'PUT', 'OPTIONS'], maxAge: 600 }));
+const sameToken = (a: string, b: string) => a.length === b.length && timingSafeEqual(Buffer.from(a), Buffer.from(b));
+app.use('*', async (c, next) => {
+  const p = new URL(c.req.url).pathname;
+  if (!TOKEN || c.req.method === 'OPTIONS' || !(p.startsWith('/api/') || p.startsWith('/media/')) || p === '/api/health') return next();
+  const given = (c.req.header('authorization') ?? '').replace(/^Bearer\s+/i, '') || (new URL(c.req.url).searchParams.get('token') ?? '');
+  if (!given || !sameToken(given, TOKEN)) return c.json({ error: 'Unauthorized: the studio token is missing or wrong.' }, 401);
+  return next();
+});
+
 app.onError(async (err, c) => {
   if (err instanceof HttpError) return c.json({ error: err.message }, err.status as 400);
   if (err instanceof ProjectLoadError) return c.json({ error: err.message }, 422);
@@ -89,7 +105,7 @@ app.onError(async (err, c) => {
   return c.json({ error: msg }, 500);
 });
 
-app.get('/api/health', (c) => c.json({ ok: true, schemaVersion: SCHEMA_VERSION, projectsDir: PROJECTS_DIR }));
+app.get('/api/health', (c) => c.json({ ok: true, schemaVersion: SCHEMA_VERSION, authRequired: !!TOKEN }));
 
 // ------------------------------------------------------------------ projects
 
@@ -133,21 +149,7 @@ app.post('/api/projects', async (c) => {
   const body = NewProject.parse(await c.req.json());
   const existing = (await fs.readdir(PROJECTS_DIR)).filter((d) => !d.startsWith('.'));
   const id = uniqueId(slug(body.title), existing);
-  const now = nowIso();
-  const project = ProjectSchema.parse({
-    schemaVersion: SCHEMA_VERSION,
-    id,
-    title: body.title,
-    subject: body.subject,
-    targetRuntimeSec: body.targetRuntimeSec,
-    stage: 'research',
-    createdAt: now,
-    updatedAt: now,
-    revision: 1,
-    chapters: [{ id: 'ch1', index: 1, title: 'Cold open' }],
-    narration: [],
-    shots: [{ id: 's01', chapterId: 'ch1', sceneId: 'sc1', anchor: { kind: 'start' }, category: 'typography', component: 'opening_title', props: {}, status: 'draft' }],
-  });
+  const project = createBlankProject(id, body.title, body.subject, body.targetRuntimeSec);
   await saveProject(projectDir(id), project, { touch: false });
   return c.json({ id }, 201);
 });
@@ -184,87 +186,16 @@ app.put('/api/projects/:id', async (c) => {
   return c.json(await projectState(id));
 });
 
-const Op = z.discriminatedUnion('op', [
-  z.object({ op: z.literal('setShotDuration'), shotId: z.string(), durationSec: z.number().positive() }),
-  z.object({ op: z.literal('splitShot'), shotId: z.string(), atSec: z.number() }),
-  z.object({ op: z.literal('mergeWithPrevious'), shotId: z.string() }),
-  z.object({ op: z.literal('moveShot'), from: z.number().int(), to: z.number().int() }),
-  z.object({ op: z.literal('deleteShot'), shotId: z.string() }),
-  z.object({ op: z.literal('assignAsset'), shotId: z.string(), assetId: z.string().nullable() }),
-  z.object({ op: z.literal('updateShot'), shotId: z.string(), patch: z.record(z.unknown()) }),
-  z.object({ op: z.literal('updateNarration'), segmentId: z.string(), patch: z.object({ text: z.string().min(1).optional(), gapBeforeSec: z.number().min(0).optional(), spokenText: z.string().optional(), locked: z.boolean().optional() }) }),
-  z.object({ op: z.literal('updateSettings'), patch: z.record(z.unknown()) }),
-  z.object({ op: z.literal('updateAudio'), patch: z.record(z.unknown()) }),
-  z.object({ op: z.literal('updateAsset'), assetId: z.string(), patch: z.record(z.unknown()) }),
-  z.object({ op: z.literal('updateClaim'), claimId: z.string(), patch: z.record(z.unknown()) }),
-]);
-
 app.post('/api/projects/:id/ops', async (c) => {
   const id = c.req.param('id');
   const op = Op.parse(await c.req.json());
   await withProject(id, async (cur) => {
-    const t = resolveTimeline(cur);
-    let next: Project;
-    switch (op.op) {
-      case 'setShotDuration':
-        next = setShotDuration(cur, t, op.shotId, op.durationSec);
-        break;
-      case 'splitShot':
-        next = splitShot(cur, t, op.shotId, op.atSec);
-        break;
-      case 'mergeWithPrevious':
-        next = mergeWithPrevious(cur, op.shotId);
-        break;
-      case 'moveShot':
-        next = moveShot(cur, op.from, op.to);
-        break;
-      case 'deleteShot':
-        next = deleteShot(cur, op.shotId);
-        break;
-      case 'assignAsset':
-        next = assignAsset(cur, op.shotId, op.assetId ?? undefined);
-        break;
-      case 'updateShot':
-        next = updateShot(cur, op.shotId, op.patch as never);
-        break;
-      case 'updateNarration': {
-        next = structuredClone(cur);
-        const n = next.narration.find((x) => x.id === op.segmentId);
-        if (!n) throw new HttpError(404, `No segment "${op.segmentId}".`);
-        if (n.locked && op.patch.text !== undefined) throw new HttpError(409, 'This segment is locked. Unlock it to edit the text.');
-        Object.assign(n, op.patch);
-        break;
-      }
-      case 'updateSettings':
-        next = { ...structuredClone(cur), settings: { ...cur.settings, ...op.patch } as Project['settings'] };
-        break;
-      case 'updateAudio':
-        next = { ...structuredClone(cur), audio: { ...cur.audio, ...op.patch } as Project['audio'] };
-        break;
-      case 'updateAsset': {
-        next = structuredClone(cur);
-        const a = next.assets.find((x) => x.id === op.assetId);
-        if (!a) throw new HttpError(404, `No asset "${op.assetId}".`);
-        const { id: _i, relPath: _r, sha256: _s, ...safe } = op.patch;
-        Object.assign(a, safe);
-        break;
-      }
-      case 'updateClaim': {
-        next = structuredClone(cur);
-        const cl = next.claims.find((x) => x.id === op.claimId);
-        if (!cl) throw new HttpError(404, `No claim "${op.claimId}".`);
-        const patch = op.patch as Record<string, unknown>;
-        if (patch.status === 'verified') {
-          const v = patch.verification as { by?: string; note?: string } | undefined;
-          if (!v?.by?.trim()) throw new HttpError(400, 'Marking a claim verified needs the name of the person who checked it.');
-          if (!(patch.sourceIds ?? cl.sourceIds).toString().length) throw new HttpError(400, 'A verified claim must cite at least one source.');
-          patch.verification = { by: v.by.trim(), on: nowIso(), note: v.note };
-        }
-        Object.assign(cl, patch);
-        break;
-      }
+    try {
+      await saveProject(projectDir(id), applyOp(cur, op));
+    } catch (e) {
+      if (e instanceof OpError) throw new HttpError(e.status, e.message);
+      throw e;
     }
-    await saveProject(projectDir(id), next);
   });
   return c.json(await projectState(id));
 });
@@ -433,7 +364,12 @@ app.get('*', async (c) => {
 
 export const PORT = Number(process.env.PORT ?? 4173);
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  serve({ fetch: app.fetch, port: PORT, hostname: process.env.HOST ?? '127.0.0.1' }, (info) => {
+  const host = process.env.HOST ?? '127.0.0.1';
+  if (!['127.0.0.1', 'localhost', '::1'].includes(host) && !TOKEN) {
+    console.error('Refusing to listen on a non-loopback address without UW_STUDIO_TOKEN. Set a long random token first.');
+    process.exit(1);
+  }
+  serve({ fetch: app.fetch, port: PORT, hostname: host }, (info) => {
     console.log(`The Unbuilt World Studio: http://127.0.0.1:${info.port}  (projects: ${PROJECTS_DIR})`);
   });
 }
